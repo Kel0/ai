@@ -157,7 +157,7 @@ class WeatherProcessor:
         """
         cities = get_world_cities()
         translit_text = translit(self.text, reversed=True)
-        match = process.extractBests(translit_text, cities)
+        match = process.extractOne(translit_text, cities)
 
         if match[1] == 0 or match[1] < 70:
             return None
